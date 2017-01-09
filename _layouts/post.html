@@ -5,15 +5,15 @@ layout: default
 <article class="hentry">
 	<div class="article-content">
 		<div class="article-column">
+			{% assign filter = '/' | append: page.slug | append: '/img/' %}
 			{% for file in site.static_files %}
-			{% if file.path contains page.slug %}
-			{% if file.path contains '/img/' %}
+			{% if file.path contains filter %}
 			<img class="screenshot" src="{{file.path}}">
-			{% endif %}
 			{% endif %}
 			{% endfor %}
 		</div>
 		<div class="entry-content">
+			<div class="category">{{page.categories | first}}</div>
 			<h2 class="entry-title">{{page.title}}</h2>
 			<div class="appdata">
 				{% if page.resources %}<a href="/about">/PALM/Programs/{{page.resources}}</a>{% endif %}
@@ -21,15 +21,16 @@ layout: default
 			<div class="description">
 			{{content}}
 			</div>
-			<div class="download">
+			
+			<h4>Downloads</h4>
+			<ul class="download">
+				{% assign filter = '/' | append: page.slug | append: '/dl/' %}
 				{% for file in site.static_files %}
-				{% if file.path contains page.slug %}
-				{% if file.path contains '/dl/' %}
-				<a class="button" href="{{file.path}}">Download <b>{{file.name}}</b></a>
-				{% endif %}
+				{% if file.path contains filter %}
+				<li><a class="button" href="{{file.path}}">{{file.name}}</a></li>
 				{% endif %}
 				{% endfor %}
-			</div>
+			</ul>
 		</div>
 	</div>
 	
