@@ -58,8 +58,8 @@ nav li:hover > ul {display:block;}
 
 /* ARTICLE */
 article {padding:20px;}
-.article-content {padding-left:280px; min-height:220px; position:relative;}
-.article-column {position:absolute; top:0; left:0; width:240px;}
+.article-content {min-height:260px;}
+.article-content:after {visibility:hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}
 .entry-title {font-size:24px;}
 .entry-title a:hover {color:#ff5757;}
 
@@ -73,12 +73,16 @@ aside {margin:35px auto; padding:0 20px; clear:both; max-width:640px;}
 .rating img {height:20px; width:20px;}
 
 /* SUMMARY */
-.screenshot {width:240px; height:160px; max-width:100%;}
+.description {line-height:1.6;}
+
+.screenshot {width:100%; margin-bottom:20px;}
 @media (min-width:420px) {
-	.screenshot {float:left; margin-right:20px; margin-bottom:35px;}
+	.article-column {width:240px; float:left;}
+	.screenshot {width:240px; height:160px; max-width:100%;}
+	.entry-content {padding-left:280px;}
 }
 
-.entry-content {background-color:#fff; color:#000; line-height:1.6; margin-top:10px;}
+
 
 /* GAMEGRID */
 .gamegrid {font-size:0;}

@@ -13,14 +13,14 @@ layout: default
 			{% endif %}
 			{% endfor %}
 		</div>
-		<h2 class="entry-title">{{page.title}}</h2>
-		<div class="appdata">
-			{% if page.resources %}<a href="/about">{{page.resources}}</a>{% endif %}
-		</div>
-
 		<div class="entry-content">
+			<h2 class="entry-title">{{page.title}}</h2>
+			<div class="appdata">
+				{% if page.resources %}<a href="/about">/PALM/Programs/{{page.resources}}</a>{% endif %}
+			</div>
+			<div class="description">
 			{{content}}
-			
+			</div>
 			<div class="download">
 				{% for file in site.static_files %}
 				{% if file.path contains page.slug %}
