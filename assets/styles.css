@@ -53,8 +53,8 @@ nav > ul > li:hover > a {background:#fff; color:#000;}
 nav li:hover > ul {display:block;}
 
 /* DOWNLOAD */
-.download {padding-bottom:5px; margin:15px 0;}
-.download .button {margin-bottom:10px;}
+.download {margin:15px 0;}
+.button {display:block; text-decoration:underline; color:#000;}
 
 /* ARTICLE */
 article {padding:20px;}
@@ -75,7 +75,7 @@ aside {margin:35px auto; padding:0 20px; clear:both; max-width:640px;}
 /* SUMMARY */
 .screenshot {width:240px; height:160px; max-width:100%;}
 @media (min-width:420px) {
-	.screenshot {float:left; margin-right:20px; margin-bottom:35px; image-rendering:pixelated; -ms-interpolation-mode:nearest-neighbor;}
+	.screenshot {float:left; margin-right:20px; margin-bottom:35px;}
 }
 
 .entry-content {background-color:#fff; color:#000; line-height:1.6; margin-top:10px;}
@@ -91,30 +91,17 @@ aside {margin:35px auto; padding:0 20px; clear:both; max-width:640px;}
 	.gamegrid .game {width:20%;}
 }
 
-.button {
-	font-weight:bold;
-	padding:2px 10px;
-	display:inline-block;
-	border:1px solid #ed1b24;
-	border-bottom:2px solid #ed1b24;
-	color:#000;
-	background:#fff;
-	text-decoration:none;
-	font-size:12px;
-	-webkit-appearance:none;
-	font-family:inherit;
-}
-
-.button small {display:inline-block; padding:inherit; font-size:12px; margin:-5px -10px -5px 5px; background:#ed1b24; color:#fff;}
-
 /* CATEGORY VIEW */
 .appnav {padding:20px; background:#eee; font-size:12px; margin-top:20px;}
 .appnav a {font-weight:bold; margin-right:20px;}
 
 .appdata {margin-bottom:15px; font-weight:bold;}
+.appdata a {color:#000; text-decoration:none; font-size:10px;}
 
 
 footer {font-size:12px; padding:20px; margin:44px 0 0 0; font-weight:bold; text-align:center; background:#333; color:#fff;}
 
 .hentry {margin-bottom:20px;}
+.prevnext a {color:#999;}
+.prevnext a:hover {color:#000;}
 .next {float:right;}

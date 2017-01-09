@@ -25,16 +25,18 @@ layout: default
 				{% for file in site.static_files %}
 				{% if file.path contains page.slug %}
 				{% if file.path contains '/dl/' %}
-				<a class="button" href="{{file.path}}">{{file.name}}</a>
+				<a class="button" href="{{file.path}}">Download <b>{{file.name}}</b></a>
 				{% endif %}
 				{% endif %}
 				{% endfor %}
 			</div>
 		</div>
 	</div>
-
-{% if page.previous %}<a href="{{page.previous.url}}">&larr; {{page.previous.title}}</a> {% endif %}
-{% if page.next %}<a class="next" href="{{page.next.url}}">{{page.next.title}} &rarr;</a> {% endif %}
+	
+	<div class="prevnext">
+		{% if page.previous %}<a href="{{page.previous.url}}">&larr; {{page.previous.title}}</a> {% endif %}
+		{% if page.next %}<a class="next" href="{{page.next.url}}">{{page.next.title}} &rarr;</a> {% endif %}
+	</div>
 </article>
 
 <!-- <aside class="meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</aside> -->
