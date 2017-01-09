@@ -1,0 +1,38 @@
+-----------------------------------------------------------------
+             ZODIAC INSTALL PROCEDURES
+-----------------------------------------------------------------
+
+To install your new application to your Zodiac console, you must use the Windows installer included in the downloaded zip file.
+
+WINDOWS INSTALLER
+=================
+To use the Windows installer, locate and double-click the WarfareInc_Install.exe file that was downloaded from the Tapwave Store to your computer.
+
+You will be prompted through the steps to install Warfare Inc to your Zodiac console.  
+
+NOTE:  On the Select Components dialog you should check the box for "Warfare Incorporated - High resolution devices".  If you leave the box checked for "Warfare Incorporated - Low resolution devices" then the game will not utilize the full screen.  You do not need to check the box for "Graphics Acceleration".
+
+Be sure to perform a HotSync operation to install the files and complete the installation.
+
+The file Delete me.prc can be deleted at any time.  It should not be installed to your Zodiac console.
+
+
+GAME REGISTRATION
+=================
+You may play Warfare Inc on your Zodiac console in Demo mode immediately.  To play the full game you will need to have the License Key.  The License Key will be sent via email to the address you've specified when you purchased the game.  Once you have the License Key launch the Warfare Inc game on your Zodiac and tap the Enter License Key button.  Enter the License Key by tapping the keys then tapping the OK button.
+
+
+TECHNICAL SUPPORT INFORMATION
+=============================
+Tapwave, Inc.
+
+Web site:      http://support.tapwave.com
+
+
+Copyright
+=========
+
+© 2003 Tapwave, Inc.  All rights reserved. 
+Zodiac is a trademark of Tapwave, Inc.
+All other brands are trademarks or registered trademarks 
+of their respective owners.

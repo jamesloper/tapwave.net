@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1" />
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{site.description}}" />
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+</head>
+
+<body>
+
+<header>
+	<div class="width">
+		<h1 class="site-title">
+			<a href="/">
+				<img src="/assets/tapwave-reborn.png" alt="Tapwave Reborn">
+			</a>
+		</h1>
+	</div>
+</header>
+
+<nav>
+	<ul class="width">
+		{% for category in site.categories %}
+		<li><a href="/{{category|first}}/">{{category|first}}</a></li>
+		{% endfor %}
+	</ul>
+</nav>
+
+<div class="body">
+{{ content }}
+</div>
+
+</body>
+</html>

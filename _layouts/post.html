@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<article class="hentry">
+	<div class="article-content">
+		<div class="article-column">
+			{% for file in site.static_files %}
+			{% if file.path contains page.slug %}
+			{% if file.path contains '/img/' %}
+			<img class="screenshot" src="{{file.path}}">
+			{% endif %}
+			{% endif %}
+			{% endfor %}
+		</div>
+		<h2 class="entry-title">{{page.title}}</h2>
+		<div class="appdata">
+			{% if page.resources %}<a href="/about">{{page.resources}}</a>{% endif %}
+		</div>
+
+		<div class="entry-content">
+			{{content}}
+			
+			<div class="download">
+				{% for file in site.static_files %}
+				{% if file.path contains page.slug %}
+				{% if file.path contains '/dl/' %}
+				<a class="button" href="{{file.path}}">{{file.name}}</a>
+				{% endif %}
+				{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+{% if page.previous %}<a href="{{page.previous.url}}">&larr; {{page.previous.title}}</a> {% endif %}
+{% if page.next %}<a class="next" href="{{page.next.url}}">{{page.next.title}} &rarr;</a> {% endif %}
+</article>
+
+<!-- <aside class="meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</aside> -->
