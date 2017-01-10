@@ -50,7 +50,7 @@ nav li:hover > ul {display:block;}
 article {padding:20px;}
 .article-content {min-height:260px; max-width:480px; margin:0 auto;}
 .article-content:after {visibility:hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}
-.entry-title {font-size:24px;}
+.entry-title {font-size:24px; margin-bottom:12px;}
 .entry-title a:hover {color:#ff5757;}
 
 .entry-content {width:80%; background:#fff; padding:20px; margin:0 auto; position:relative; z-index:1;}
@@ -65,7 +65,7 @@ aside {margin:35px auto; padding:0 20px; clear:both; max-width:640px;}
 .rating img {height:20px; width:20px;}
 
 /* SUMMARY */
-.description {line-height:1.6; margin-bottom:40px;}
+.description {line-height:1.4; margin-bottom:40px;}
 
 .screenshot {width:100%; margin-bottom:-50px; image-rendering:pixelated;}
 
@@ -80,13 +80,6 @@ aside {margin:35px auto; padding:0 20px; clear:both; max-width:640px;}
 @media (min-width:600px) {
 	.gamegrid .game {width:20%;}
 }
-
-/* CATEGORY VIEW */
-.appnav {padding:20px; background:#eee; font-size:12px; margin-top:20px;}
-.appnav a {font-weight:bold; margin-right:20px;}
-
-.appdata {margin-bottom:15px; font-weight:bold;}
-.appdata a {color:#000; text-decoration:none; font-size:10px;}
 
 
 footer {font-size:12px; padding:20px; margin:44px 0 0 0; font-weight:bold; text-align:center; background:#333; color:#fff;}

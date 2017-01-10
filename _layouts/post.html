@@ -15,28 +15,25 @@ layout: default
 		<div class="entry-content">
 			<div class="category">{{page.categories | first}}</div>
 			<h2 class="entry-title">{{page.title}}</h2>
-			<div class="appdata">
-				{% if page.resources %}<a href="/about">/PALM/Programs/{{page.resources}}</a>{% endif %}
-			</div>
-			<div class="description">
-			{{content}}
-			</div>
+			<div class="description">{{content}}</div>
 			
 			<h4>Downloads</h4>
 			<ul class="download">
 				{% assign filter = '/' | append: page.slug | append: '/dl/' %}
 				{% for file in site.static_files %}
 				{% if file.path contains filter %}
-				<li><a class="button" href="{{file.path}}">{{file.name}}</a></li>
+				<li><a href="{{file.path}}">{{file.name}}</a></li>
 				{% endif %}
 				{% endfor %}
+				{% if page.resources %}
+				<li>This app's <a href="/about">data files</a> belong in {{page.resources}}</li>
+				{% endif %}
 			</ul>
 		</div>
-	</div>
-	
-	<div class="prevnext">
-		{% if page.previous %}<a href="{{page.previous.url}}">&larr; {{page.previous.title}}</a> {% endif %}
-		{% if page.next %}<a class="next" href="{{page.next.url}}">{{page.next.title}} &rarr;</a> {% endif %}
+		<div class="prevnext">
+			{% if page.previous %}<a href="{{page.previous.url}}">&larr; {{page.previous.title}}</a> {% endif %}
+			{% if page.next %}<a class="next" href="{{page.next.url}}">{{page.next.title}} &rarr;</a> {% endif %}
+		</div>
 	</div>
 </article>
 
