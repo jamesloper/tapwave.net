@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1" />
-    <title>{{page.title}}</title>
+    <title>{{page.title}} - Tapwave Reborn</title>
     <meta name="description" content="{{site.description}}" />
     <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
 </head>
@@ -11,17 +11,25 @@
 <body>
 
 <header>
-	<div class="width">
-		<h1 class="site-title">
-			<a href="/">
-				<img src="/assets/tapwave-reborn.png" alt="Tapwave Reborn">
-			</a>
-		</h1>
-	</div>
+	<h1 class="site-title">
+		<a href="/"><img src="/assets/tapwave-reborn.png" alt="Tapwave Reborn"></a>
+	</h1>
+	<nav class="top-nav">
+		<ul>
+			<li><a href="/categories">Categories</a></li>
+			<li><a href="/guide">Install Guide</a></li>
+		</ul>
+	</nav>
 </header>
 
-<nav>
-	<ul class="width">
+<nav class="side-nav">
+	<h3 class="meta">An archive of Tapwave Zodiac software</h3>
+	<form action="/search" id="search">
+		<input type="search" name="q" placeholder="Search">
+	</form>
+	
+	<h4>Categories</h4>
+	<ul>
 		{% for category in site.categories %}
 		<li><a href="/{{category|first}}/">{{category|first}}</a></li>
 		{% endfor %}
@@ -29,8 +37,13 @@
 </nav>
 
 <div class="body">
-{{ content }}
+{{content}}
 </div>
+
+<footer>
+	<b>Have a missing file?</b> Send file to jamesloper@gmail.com
+	<b>Want to donate?</b> Send bits to 12zAPs2zBcZEouZPmep8Jm9yyaLZpxuGiq
+</footer>
 
 </body>
 </html>

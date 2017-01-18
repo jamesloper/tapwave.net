@@ -2,11 +2,17 @@
 layout: default
 ---
 
-<article>
+<div class="post-list">
 	{% for post in site.categories[page.category] %}
-	<div class="hentry">
-	    <h4 class="entry-title"><a href="{{post.url}}">{{post.title}}</a></h4>
-	    {{post.content}}
-	</div>
+	<article class="app">
+		<a class="screenshot" href="{{post.url}}">
+			<img src="/screenshots/{{post.slug}}.png">
+		</a>
+		<div class="entry-content">
+			<div class="category">{{page.categories | first}}</div>
+		    <h2 class="entry-title"><a href="{{post.url}}">{{post.title}}</a></h2>
+			<div class="description">{{post.content}}</div>
+		</div>
+	</article>
 	{% endfor %}
-</article>
+</div>

@@ -1,0 +1,12 @@
+---
+layout: page
+---
+
+<article>
+	<h2 class="entry-title">Categories</h2>
+	<ul>
+		{% for category in site.categories %}
+		<li><a href="/{{category|first}}/">{{category|first}}</a></li>
+		{% endfor %}
+	</ul>
+</article>
