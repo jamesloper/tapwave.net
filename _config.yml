@@ -3,7 +3,7 @@ email: jamesloper@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Archive of all Tapwave Zodiac software available before the company's demise. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://tapwave.net" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://tapwave.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jamesloper
 github_username:  jamesloper
 

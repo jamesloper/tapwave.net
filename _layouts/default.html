@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html amp lang="en">
 <head>
-    <meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1" />
-    <title>{{page.title}} - Tapwave Reborn</title>
-    <meta name="description" content="{{site.description}}" />
-    <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+<meta charset="UTF-8" />
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+<link rel="canonical" href="{{page.url}}" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1" />
+<title>{{page.title}} - Tapwave Zodiac</title>
+<meta name="description" content="{{site.description}}" />
+{% include amp-boilerplate.html %}
+<style amp-custom>{% include styles.css %}</style>
 </head>
 
 <body>
 
 <header>
 	<h1 class="site-title">
-		<a href="/"><img src="/assets/tapwave-reborn.png" alt="Tapwave Reborn"></a>
+		<a href="/"><amp-img src="/assets/tapwave-reborn.png" title="Tapwave Zodiac" layout="fixed" height="28" width="220"></amp-img></a>
 	</h1>
 	<nav class="top-nav">
 		<ul>
@@ -23,8 +28,8 @@
 </header>
 
 <nav class="side-nav">
-	<h3 class="meta">An archive of Tapwave Zodiac software</h3>
-	<form action="/search" id="search">
+	<h3 class="meta">An archive of Tapwave Zodiac games & software</h3>
+	<form action="/search" id="search" target="_top">
 		<input type="search" name="q" placeholder="Search">
 	</form>
 	
@@ -45,13 +50,6 @@
 	<b>Want to donate?</b> Send bits to 12zAPs2zBcZEouZPmep8Jm9yyaLZpxuGiq
 </footer>
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-60712526-2', 'auto');
-ga('send', 'pageview');
-</script>
+{% include analytics.html %}
 </body>
 </html>
