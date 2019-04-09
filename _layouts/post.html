@@ -4,32 +4,32 @@ layout: default
 {% assign filter = '/' | append: page.slug | append: '/dl/' %}
 
 <div class="page">
-	<article class="app">
-		<div class="screenshot">
-			<amp-img layout="responsive" src="/screenshots/{{page.slug}}.png" height="320" width="480"></amp-img>
-		</div>
-		<div class="entry-content">
-			<div class="category">{{page.categories | first}}</div>
-			<h2 class="entry-title">{{page.title}}</h2>
-			<div class="description">{{content}}</div>
-		</div>
-		<div class="prevnext">
-			{% if page.previous %}<a href="{{page.previous.url}}">&larr; {{page.previous.title}}</a> {% endif %}
-			{% if page.next %}<a class="next" href="{{page.next.url}}">{{page.next.title}} &rarr;</a> {% endif %}
-		</div>
-	</article>
+    <article class="app">
+        <div class="screenshot">
+            <img title="{{page.title}}" src="/screenshots/{{page.slug}}.png" height="320" width="480"/>
+        </div>
+        <div class="entry-content">
+            <div class="category">{{page.categories | first}}</div>
+            <h2 class="entry-title">{{page.title}}</h2>
+            <div class="description">{{content}}</div>
+        </div>
+        <div class="prevnext">
+            {% if page.previous %}<a href="{{page.previous.url}}">&larr; {{page.previous.title}}</a> {% endif %}
+            {% if page.next %}<a class="next" href="{{page.next.url}}">{{page.next.title}} &rarr;</a> {% endif %}
+        </div>
+    </article>
 
-	<aside>
-		<h3>Downloads</h3>
-		<p>Install <a href="/files/popaccess/dl/PopAccess.prc">PopAccess</a> to play unsigned Zodiac software.</p>
-		{% if page.resources %}<p>Data file location is <b>/PALM/Programs/{{page.resources}}</b></p>{% endif %}
+    <aside>
+        <h3>Downloads</h3>
+        <p>Install <a href="/utilities/popaccess">PopAccess</a> to play unsigned Zodiac software.</p>
+        {% if page.resources %}<p>Data file location is <b>/PALM/Programs/{{page.resources}}</b></p>{% endif %}
 
-		{% for file in site.static_files %}
-		{% if file.path contains filter %}
-		<a class="button" href="{{file.path}}">{{file.name}}</a>
-		{% endif %}
-		{% endfor %}
-	</aside>
+        {% for file in site.static_files %}
+        {% if file.path contains filter %}
+        <a class="button" href="{{file.path}}">{{file.name}}</a>
+        {% endif %}
+        {% endfor %}
+        <div class="meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</div>
+    </aside>
 </div>
 
-<!-- <aside class="meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</aside> -->

@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html amp lang="en">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
-<script async src="https://cdn.ampproject.org/v0.js"></script>
-<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 <link rel="canonical" href="{{page.url}}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1" />
 <title>{{page.title}} - Tapwave Zodiac</title>
 <meta name="description" content="{{site.description}}" />
-{% include amp-boilerplate.html %}
-<style amp-custom>{% include styles.css %}</style>
+<style>{% include styles.css %}</style>
 </head>
 
 <body>
 
 <header>
 	<h1 class="site-title">
-		<a href="/"><amp-img src="/assets/tapwave-reborn.png" title="Tapwave Zodiac" layout="fixed" height="28" width="220"></amp-img></a>
+		<a href="/">
+			<img alt="logo" src="/assets/tapwave-reborn.png" title="Tapwave Zodiac" height="28" width="220"/>
+		</a>
 	</h1>
 	<nav class="top-nav">
 		<ul>
@@ -32,7 +30,7 @@
 	<form action="/search" id="search" target="_top">
 		<input type="search" name="q" placeholder="Search">
 	</form>
-	
+
 	<h4>Categories</h4>
 	<ul>
 		{% for category in site.categories %}
@@ -47,7 +45,7 @@
 
 <footer>
 	<b>Have a missing file?</b> Send file to jamesloper@gmail.com
-	<b>Want to donate?</b> Send bits to 12zAPs2zBcZEouZPmep8Jm9yyaLZpxuGiq
+<!--	<b>Want to donate?</b> Send bits to 12zAPs2zBcZEouZPmep8Jm9yyaLZpxuGiq-->
 </footer>
 
 {% include analytics.html %}

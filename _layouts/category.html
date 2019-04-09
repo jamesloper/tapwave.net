@@ -6,7 +6,7 @@ layout: default
 	{% for post in site.categories[page.category] %}
 	<article class="app">
 		<a class="screenshot" href="{{post.url}}">
-			<amp-img layout="responsive" src="/screenshots/{{post.slug}}.png" height="320" width="480"></amp-img>
+			<img src="/screenshots/{{post.slug}}.png" height="320" width="480"/>
 		</a>
 		<div class="entry-content">
 			<div class="category">{{page.categories | first}}</div>
