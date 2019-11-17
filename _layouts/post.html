@@ -33,10 +33,12 @@ layout: default
                 <i class="material-icons">cloud_download</i>
                 {{file.name}}
             </span>
+            {% if kilobytes > 0 %}
             <span class="file-size">
                 {% if kilobytes < 1024 %}{{kilobytes}} KB{% endif %}
                 {% if kilobytes >= 1024 %}{{kilobytes | divided_by: 1024}} MB{% endif %}
             </span>
+            {% endif %}
         </a>
         {% endif %}
         {% endfor %}
