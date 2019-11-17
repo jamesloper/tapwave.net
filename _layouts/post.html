@@ -26,7 +26,18 @@ layout: default
 
         {% for file in site.static_files %}
         {% if file.path contains filter %}
-        <a class="button" href="{{file.path}}">{{file.name}}</a>
+        {% assign kilobytes = file.path | prepend: '.' | file_size | divided_by: 1024 %}
+
+        <a class="button" href="{{file.path}}">
+            <span class="button-left">
+                <i class="material-icons">cloud_download</i>
+                {{file.name}}
+            </span>
+            <span class="file-size">
+                {% if kilobytes < 1024 %}{{kilobytes}} KB{% endif %}
+                {% if kilobytes >= 1024 %}{{kilobytes | divided_by: 1024}} MB{% endif %}
+            </span>
+        </a>
         {% endif %}
         {% endfor %}
         <div class="meta">Posted on {{ page.date | date: "%B %-d, %Y" }}</div>
