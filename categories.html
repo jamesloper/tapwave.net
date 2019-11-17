@@ -6,7 +6,7 @@ layout: page
 	<h2 class="entry-title">Categories</h2>
 	<ul>
 		{% for category in site.categories %}
-		<li><a href="/{{category|first}}/">{{category|first}}</a></li>
+		<li><a href="/{{category|first}}/">{{category|first|capitalize}}</a></li>
 		{% endfor %}
 	</ul>
 </article>
