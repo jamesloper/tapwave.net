@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: tapwave.net
+Token: 8e58969e3f522cc1e00e56a913ddcb4010b836fe3a19ec9a2602d45bf25008e8
